@@ -17,7 +17,7 @@ const Widget = ({ type }) => {
   switch (type) {
     case "user":
       data = {
-        title: "USERS",
+        title: "Tổng nhân viên",
         isMoney: false,
         link: "See all users",
         query:"users",
@@ -50,9 +50,9 @@ const Widget = ({ type }) => {
       break;
     case "earning":
       data = {
-        title: "EARNINGS",
+        title: "Tổng lương",
         isMoney: true,
-        link: "View net earnings",
+        link: "View ",
         icon: (
           <MonetizationOnOutlinedIcon
             className="icon"

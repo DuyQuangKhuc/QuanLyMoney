@@ -20,10 +20,7 @@ const Navbar = () => {
           <SearchOutlinedIcon />
         </div>
         <div className="items">
-          <div className="item">
-            <LanguageOutlinedIcon className="icon" />
-            English
-          </div>
+          
           <div className="item">
             <DarkModeOutlinedIcon
               className="icon"

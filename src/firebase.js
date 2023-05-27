@@ -5,12 +5,14 @@ import { getStorage } from "firebase/storage";
 
 
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_KEY,
-  authDomain: "tutorial-5a2cf.firebaseapp.com",
-  projectId: "tutorial-5a2cf",
-  storageBucket: "tutorial-5a2cf.appspot.com",
-  messagingSenderId: "585126334212",
-  appId: "1:585126334212:web:8539eafc56885e1b4c4a51"
+  apiKey: "AIzaSyAp7q2T07VOPchctK0RVVFfdNU9KAjo1Uc",
+  authDomain: "lachagarden.firebaseapp.com",
+  databaseURL: "https://lachagarden-default-rtdb.firebaseio.com",
+  projectId: "lachagarden",
+  storageBucket: "lachagarden.appspot.com",
+  messagingSenderId: "904516436073",
+  appId: "1:904516436073:web:a348ba6fac45f5076c62f8",
+  measurementId: "G-HMF1YHRT6P"
 };
 
 const app = initializeApp(firebaseConfig);

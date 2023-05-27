@@ -1,5 +1,7 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { useContext, useState } from "react";
-import "./login.scss";
+import "./Login.css"
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
 import { useNavigate } from "react-router-dom";
@@ -30,21 +32,35 @@ const Login = () => {
   };
 
   return (
-    <div className="login">
-      <form onSubmit={handleLogin}>
-        <input
-          type="email"
-          placeholder="email"
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="password"
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button type="submit">Login</button>
-        {error && <span>Wrong email or password!</span>}
-      </form>
+    <div>
+      <section>
+        <div class="form-box">
+          <div class="form-value">
+            <form onSubmit={handleLogin}>
+              <h2>Login</h2>
+              <div class="inputbox">
+                <ion-icon name="mail-outline"></ion-icon>
+                <input type="email" required onChange={(e) => setEmail(e.target.value)} />
+                  <label for="">Email</label>
+              </div>
+              <div class="inputbox">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input type="password" required onChange={(e) => setPassword(e.target.value)} />
+                  <label for="">Password</label>
+              </div>
+              <div class="forget">
+                <label for=""><input type="checkbox" />Remember Me  </label>
+
+              </div>
+              <button>Log in</button>
+              {error && (
+                <span className="text-red-700">Wrong email or password!</span>
+              )}
+            </form>
+          </div>
+        </div>
+      </section>
+     
     </div>
   );
 };
