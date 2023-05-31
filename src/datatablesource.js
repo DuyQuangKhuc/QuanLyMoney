@@ -104,7 +104,7 @@ export const salaryColumns  = [
   },
   {
     field: "numberofdaysofunpaidleave",
-    headerName: "Number of Days of Unpaid Leave",
+    headerName: "Number Days of Unpaid Leave",
     width: 100,
   },
   {
