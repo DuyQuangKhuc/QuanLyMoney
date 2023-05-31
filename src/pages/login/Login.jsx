@@ -50,7 +50,7 @@ const Login = () => {
               </div>
               <div class="forget">
                 <label for=""><input type="checkbox" />Remember Me  </label>
-
+                
               </div>
               <button>Log in</button>
               {error && (
