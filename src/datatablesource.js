@@ -29,6 +29,36 @@ export const userColumns = [
     width: 100,
   },
   {
+    field: "dateOfBirth",
+    headerName: "Date Of Birth",
+    width: 100,
+  },
+  {
+    field: "DateWork",
+    headerName: "DateWork",
+    width: 100,
+  },
+  {
+    field: "insurances",
+    headerName: "insurances",
+    width: 100,
+  },
+  {
+    field: "Deparmentl",
+    headerName: "Deparmentl",
+    width: 100,
+  },
+  {
+    field: "AttendanceDT",
+    headerName: "attendance data",
+    width: 100,
+  },
+  {
+    field: "Position",
+    headerName: "Position",
+    width: 100,
+  },
+  {
     field: "status",
     headerName: "Status",
     width: 160,

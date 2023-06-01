@@ -45,7 +45,7 @@ const Sidebar = () => {
           <Link to="/users" style={{ textDecoration: "none" }}>
             <li>
               <PersonOutlineIcon className="icon" />
-              <span>Nhân viên</span>
+              <span>Staff</span>
             </li>
           </Link>
           {/* <Link to="/products" style={{ textDecoration: "none" }}>
@@ -56,7 +56,7 @@ const Sidebar = () => {
           </Link> */}
           <li>
             <CreditCardIcon className="icon" />
-            <span>Lương</span>
+            <span>Salary</span>
           </li>
           {/* <li>
             <LocalShippingIcon className="icon" />
@@ -66,13 +66,13 @@ const Sidebar = () => {
           <Link to="/attendanceData" style={{ textDecoration: "none" }}>
           <li>
             <InsertChartIcon className="icon" />
-            <span>Dữ liệu tính lương</span>
+            <span>Salary Data</span>
           </li>
           </Link>
           
           <li>
             <NotificationsNoneIcon className="icon" />
-            <span>Thông báo</span>
+            <span>Notification</span>
           </li>
           <p className="title">SERVICE</p>
           <li>
