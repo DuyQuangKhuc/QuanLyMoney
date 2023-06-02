@@ -1,7 +1,7 @@
 import "./AttendanceData.scss"
 import Sidebar from "../../components/sidebar/Sidebar"
 import Navbar from "../../components/navbar/Navbar"
-import DataAttendance from "../../components/datatable/DataAttendance"
+import DataSalary from "../../components/datatable/DataAttendance"
 
 const AttendanceData = () => {
   return (
@@ -9,7 +9,7 @@ const AttendanceData = () => {
       <Sidebar/>
       <div className="listContainer">
         <Navbar/>
-        <DataAttendance/>
+        <DataSalary/>
       </div>
     </div>
   )

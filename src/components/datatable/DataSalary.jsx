@@ -85,7 +85,7 @@ const DataSalary = () => {
   return (
     <div className="datatable">
       <div className="datatableTitle">
-        Add New User
+        Salary Table
         <Link to="/users/new" className="link">
           Add New
         </Link>

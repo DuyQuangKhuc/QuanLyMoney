@@ -54,10 +54,12 @@ const Sidebar = () => {
               <span>Lương</span>
             </li>
           </Link> */}
+          <Link to="/salary" style={{ textDecoration: "none" }}>
           <li>
             <CreditCardIcon className="icon" />
-            <span>Lương</span>
+            <span>Tính Lương</span>
           </li>
+          </Link>
           {/* <li>
             <LocalShippingIcon className="icon" />
             <span>Delivery</span>

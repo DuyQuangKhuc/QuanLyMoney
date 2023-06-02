@@ -1,7 +1,6 @@
-import "./datatable.scss";
-import axios from "axios";
-import { DataGrid, GridColumn  } from "@mui/x-data-grid";
-import { userColumns, userRows } from "../../datatablesource";
+import "./DataAttendance.scss";
+import { DataGrid } from "@mui/x-data-grid";
+import { salaryColumns } from "../../datatablesource";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import {
@@ -13,23 +12,26 @@ import {
 } from "firebase/firestore";
 import { db } from "../../firebase";
 
-const Datatable = () => {
+const DataAttendance = () => {
   const [data, setData] = useState([]);
-  const [userData, setUserData] = useState([]);
 
   useEffect(() => {
+    // const fetchData = async () => {
+    //   let list = [];
+    //   try {
+    //     const querySnapshot = await getDocs(collection(db, "users"));
+    //     querySnapshot.forEach((doc) => {
+    //       list.push({ id: doc.id, ...doc.data() });
+    //     });
+    //     setData(list);
+    //     console.log(list);
+    //   } catch (err) {
+    //     console.log(err);
+    //   }
+    // };
+    // fetchData();
 
-    axios.get('https://64795c85a455e257fa632063.mockapi.io/users')
-    .then(function(response) {
-      var users = response.data;
-      setUserData(users);
-      console.log(users);
-    })
-    .catch(function(error) {
-      console.log(error);
-    });
-
-
+    // LISTEN (REALTIME)
     const unsub = onSnapshot(
       collection(db, "users"),
       (snapShot) => {
@@ -91,7 +93,7 @@ const Datatable = () => {
       <DataGrid
         className="datagrid"
         rows={data}
-        columns={userColumns.concat(actionColumn)}
+        columns={salaryColumns.concat(actionColumn)}
         pageSize={9}
         rowsPerPageOptions={[9]}
         checkboxSelection
@@ -100,21 +102,4 @@ const Datatable = () => {
   );
 };
 
-export default Datatable;
-
-    // const fetchData = async () => {
-    //   let list = [];
-    //   try {
-    //     const querySnapshot = await getDocs(collection(db, "users"));
-    //     querySnapshot.forEach((doc) => {
-    //       list.push({ id: doc.id, ...doc.data() });
-    //     });
-    //     setData(list);
-    //     console.log(list);
-    //   } catch (err) {
-    //     console.log(err);
-    //   }
-    // };
-    // fetchData();
-
-    // LISTEN (REALTIME)
+export default DataAttendance;
