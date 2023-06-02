@@ -63,10 +63,13 @@ const Sidebar = () => {
             <span>Delivery</span>
           </li> */}
           <p className="title">USEFUL</p>
+          <Link to="/attendanceData" style={{ textDecoration: "none" }}>
           <li>
             <InsertChartIcon className="icon" />
             <span>Dữ liệu tính lương</span>
           </li>
+          </Link>
+          
           <li>
             <NotificationsNoneIcon className="icon" />
             <span>Thông báo</span>

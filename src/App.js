@@ -9,11 +9,12 @@ import "./style/dark.scss";
 import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
 import { AuthContext } from "./context/AuthContext";
+import AttendanceData from "./pages/AttendanceData/AttendanceData";
 
 function App() {
   const { darkMode } = useContext(DarkModeContext);
 
-  const {currentUser} = useContext(AuthContext)
+  const { currentUser } = useContext(AuthContext);
 
   const RequireAuth = ({ children }) => {
     return currentUser ? children : <Navigate to="/login" />;
@@ -84,6 +85,16 @@ function App() {
                   </RequireAuth>
                 }
               />
+            </Route>
+            <Route path="AttendanceData">
+                <Route 
+                  index
+                  element={
+                    <RequireAuth>
+                      <AttendanceData/>
+                    </RequireAuth>
+                  }
+                />
             </Route>
           </Route>
         </Routes>
