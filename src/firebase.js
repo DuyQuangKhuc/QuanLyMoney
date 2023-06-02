@@ -5,14 +5,13 @@ import { getStorage } from "firebase/storage";
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAp7q2T07VOPchctK0RVVFfdNU9KAjo1Uc",
-  authDomain: "lachagarden.firebaseapp.com",
-  databaseURL: "https://lachagarden-default-rtdb.firebaseio.com",
-  projectId: "lachagarden",
-  storageBucket: "lachagarden.appspot.com",
-  messagingSenderId: "904516436073",
-  appId: "1:904516436073:web:a348ba6fac45f5076c62f8",
-  measurementId: "G-HMF1YHRT6P"
+  apiKey: "AIzaSyAcpjzR1oHeX6wFeKuBYC05qw3FDRRt8dg",
+  authDomain: "quanly-41170.firebaseapp.com",
+  projectId: "quanly-41170",
+  storageBucket: "quanly-41170.appspot.com",
+  messagingSenderId: "610246658820",
+  appId: "1:610246658820:web:768cc3b2c5df1bf2371e51",
+  measurementId: "G-5VJ18VSLF5"
 };
 
 const app = initializeApp(firebaseConfig);
