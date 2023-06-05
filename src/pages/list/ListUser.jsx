@@ -10,7 +10,7 @@ const ListUser = () => {
       <Sidebar/>
       <div className="listContainer">
         <Navbar/>
-        <Datatable userColumns={userColumns}/>
+        <Datatable userColumns={userColumns} />
       </div>
     </div>
   )
