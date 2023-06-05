@@ -10,6 +10,7 @@ import { DarkModeContext } from "./context/darkModeContext";
 import { AuthContext } from "./context/AuthContext";
 import AttendanceData from "./pages/AttendanceData/AttendanceData";
 import ListUser from "./pages/list/ListUser";
+import { ListSalary } from "./pages/list/ListSalary";
 
 function App() {
   const { darkMode } = useContext(DarkModeContext);
@@ -34,6 +35,7 @@ function App() {
                 </RequireAuth>
               }
             />
+
             <Route path="users">
               <Route
                 index
@@ -60,6 +62,34 @@ function App() {
                 }
               />
             </Route>
+
+            <Route path="salary">
+              <Route
+                index
+                element={
+                  <RequireAuth> 
+                    <ListSalary />
+                  </RequireAuth>
+                }
+              />
+              <Route
+                path=":salary"
+                element={
+                  <RequireAuth>
+                    <Single />
+                  </RequireAuth>
+                }
+              />
+              <Route
+                path="new"
+                element={
+                  <RequireAuth>
+                    <New inputs={userInputs} title="Add New salary" />
+                  </RequireAuth>
+                }
+              />
+            </Route>
+
             <Route path="products">
               <Route
                 index
