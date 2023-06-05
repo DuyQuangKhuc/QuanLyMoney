@@ -1,6 +1,5 @@
 import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
-import List from "./pages/list/List";
 import Single from "./pages/single/Single";
 import New from "./pages/new/New";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
@@ -10,6 +9,7 @@ import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
 import { AuthContext } from "./context/AuthContext";
 import AttendanceData from "./pages/AttendanceData/AttendanceData";
+import ListUser from "./pages/list/ListUser";
 
 function App() {
   const { darkMode } = useContext(DarkModeContext);
@@ -39,7 +39,7 @@ function App() {
                 index
                 element={
                   <RequireAuth>
-                    <List />
+                    <ListUser />
                   </RequireAuth>
                 }
               />
@@ -65,7 +65,7 @@ function App() {
                 index
                 element={
                   <RequireAuth>
-                    <List />
+                    <ListUser />
                   </RequireAuth>
                 }
               />

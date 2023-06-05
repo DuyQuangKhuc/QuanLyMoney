@@ -41,6 +41,37 @@ export const userInputs = [
       placeholder: "USA",
     },
   ];
+
+export const userColumns = [
+  {
+    Header: "ID",
+    accessor: "id",
+  },
+  {
+    Header: "Full Name",
+    accessor: "fullName",
+  },
+  {
+    Header: "Phone",
+    accessor: "phone",
+  },
+  {
+    Header: "Gmail",
+    accessor: "gmail",
+  },
+  {
+    Header: "Gender",
+    accessor: "gender",
+  },
+  {
+    Header: "Status",
+    accessor: "status",
+  },
+  {
+    Header: "",
+    accessor: "icon",
+  },
+];
   
   export const productInputs = [
     {
