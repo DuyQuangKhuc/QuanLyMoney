@@ -1,9 +1,9 @@
-import "./AttendanceData.scss"
+import "./Salary.scss"
 import Sidebar from "../../components/sidebar/Sidebar"
 import Navbar from "../../components/navbar/Navbar"
 import DataSalary from "../../components/datatable/DataAttendance"
 
-const AttendanceData = () => {
+const Salary = () => {
   return (
     <div className="list">
       <Sidebar/>
@@ -15,4 +15,4 @@ const AttendanceData = () => {
   )
 }
 
-export default AttendanceData
+export default Salary

@@ -23,6 +23,7 @@
         text-align: center;
 
         img {
+          margin-top: 100px;
           width: 100px;
           height: 100px;
           border-radius: 50%;
@@ -59,24 +60,25 @@
               border-bottom: 1px solid gray;
             }
           }
+      }
+      
+      button {
+        margin-left: 42%;
+        width: 150px;
+        padding: 10px;
+        border: none;
+        background-color: teal;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 10px;
 
-          button {
-            width: 150px;
-            padding: 10px;
-            border: none;
-            background-color: teal;
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-            margin-top: 10px;
-
-            &:disabled{
-              background-color: rgba(3, 92, 92, 0.322);
-              cursor: not-allowed;
-            }
-          }
+        &:disabled{
+          background-color: rgba(3, 92, 92, 0.322);
+          cursor: not-allowed;
         }
       }
+    }
     }
   }
 }

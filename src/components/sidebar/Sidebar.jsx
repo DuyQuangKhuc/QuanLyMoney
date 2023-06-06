@@ -28,7 +28,7 @@ const Sidebar = () => {
     <div className="sidebar">
       <div className="top">
         <Link to="/" style={{ textDecoration: "none" }}>
-          <span className="logo">Quản lý</span>
+          <span className="logo">Xpandit</span>
         </Link>
       </div>
       <hr />

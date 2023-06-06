@@ -4,11 +4,8 @@ import classNames from "classnames/bind";
 import { Link } from "react-router-dom";
 import { useTable, usePagination } from "react-table";
 import axios from "axios";
-import moment from "moment";
 
-import {
-  SortIcon,
-} from "../../Icons/Icon";
+import { SortIcon } from "../../Icons/Icon";
 import styled from "styled-components";
 const cx = classNames.bind(styles);
 
@@ -48,6 +45,11 @@ function UserTable({ userColumns }) {
 
   const [UserList, setUserList] = useState(null);
   const token = localStorage.getItem("accessToken");
+
+  const handleAddNewEmployee = () => {
+    //sử lý API và add new
+  }
+
   useEffect(() => {
     axios({
       method: "GET",
@@ -66,8 +68,17 @@ function UserTable({ userColumns }) {
       });
     // eslint-disable-next-line
   }, []);
+
   return (
     <div className={cx("wrapper")}>
+      <div className="table-title">
+      <h3>List Employees</h3>
+      <Link  to="/users/new" className="link">
+      <button className="add-button" onClick={handleAddNewEmployee}>
+        Add new
+      </button>
+      </Link>
+    </div>
       <table className={cx("tables")}>
         <thead className={cx("table-header")}>
           <tr>
@@ -103,25 +114,7 @@ function UserTable({ userColumns }) {
                   >
                     ...
                   </button>
-                  {/* <ul
-                    className=" dropdown-menu min-w-max absolute hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded-lg shadow-lg mt-1 m-0 bg-clip-padding border-none"
-                    aria-labelledby="dropdownMenuButton"
-                  >
-                    <h6
-                      className=" text-gray-700 font-bold text-base py-1 px-4 block w-full whitespace-nowrap bg-transparent border-b border-black "
-                    >
-                      Manage
-                    </h6>
-
-                    <li>
-                      <button type="button" >
-                        <p className="dropdown-item text-base py-1 px-4 font-medium block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100 cursor-pointer">
-                          <span><i className="icon icon-delete_forever text-xl mr-4" ></i></span>
-                          <span>Delete Program</span>
-                        </p>
-                      </button>
-                    </li>
-                  </ul> */}
+                  
                 </div>
               </td>
             </tr>
