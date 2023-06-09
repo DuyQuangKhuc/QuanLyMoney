@@ -98,7 +98,12 @@ const DataSalary = () => {
         rowsPerPageOptions={[9]}
         checkboxSelection
       />
+      <div className="listContainer">
+        <Navbar/>
+        <DataSalary2 salaryColumns={salaryColumns}/>
+      </div>
     </div>
+    
   );
 };
 

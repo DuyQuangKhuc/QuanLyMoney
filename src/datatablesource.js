@@ -48,7 +48,7 @@ export const userColumns = [
 ];
 
 export const salaryColumns  = [
-  { field: "id", headerName: "ID", width: 70 },
+  { field: "id", headerName: "UserID", width: 70 },
   {
     field: "user",
     headerName: "User",

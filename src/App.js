@@ -11,6 +11,7 @@ import { AuthContext } from "./context/AuthContext";
 import AttendanceData from "./pages/AttendanceData/AttendanceData";
 import ListUser from "./pages/list/ListUser";
 import { ListSalary } from "./pages/list/ListSalary";
+import Salary from "./pages/Salary/Salary";
 import UserProfile from "./pages/userProfile/userProfile";
 
 function App() {
@@ -77,7 +78,7 @@ function App() {
                 index
                 element={
                   <RequireAuth> 
-                    <ListSalary />
+                    <Salary />
                   </RequireAuth>
                 }
               />
