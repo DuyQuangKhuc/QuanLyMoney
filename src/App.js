@@ -11,6 +11,7 @@ import { AuthContext } from "./context/AuthContext";
 import AttendanceData from "./pages/AttendanceData/AttendanceData";
 import ListUser from "./pages/list/ListUser";
 import { ListSalary } from "./pages/list/ListSalary";
+import UserProfile from "./pages/userProfile/userProfile";
 
 function App() {
   const { darkMode } = useContext(DarkModeContext);
@@ -50,6 +51,14 @@ function App() {
                 element={
                   <RequireAuth>
                     <Single />
+                  </RequireAuth>
+                }
+              />
+              <Route
+                path="users/profile"
+                element={
+                  <RequireAuth>
+                    <UserProfile />
                   </RequireAuth>
                 }
               />

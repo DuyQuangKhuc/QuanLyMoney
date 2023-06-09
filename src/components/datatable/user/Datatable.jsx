@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef  } from "react";
+import { Menu, MenuItem, Button } from "@material-ui/core";
 import styles from "./Table.css";
 import classNames from "classnames/bind";
 import { Link } from "react-router-dom";
 import { useTable, usePagination } from "react-table";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 import { SortIcon } from "../../Icons/Icon";
@@ -45,6 +47,34 @@ function UserTable({ userColumns }) {
 
   const [UserList, setUserList] = useState(null);
   const token = localStorage.getItem("accessToken");
+  const [anchorEl, setAnchorEl] = useState(null);
+  const [selectedUser, setSelectedUser] = useState(null);
+  const navigate = useNavigate();
+  
+  const dropdownRef = useRef(null);
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+  const handleViewUser = (user) => {
+    setSelectedUser(user);
+    // Các thao tác hiển thị thông tin người dùng khi xem
+    handleClose();
+    console.log(user);
+    navigate(`/user/profile`);
+  };
+
+  const handleEditUser = (user) => {
+    setSelectedUser(user);
+    // Các thao tác để sửa thông tin người dùng
+  };
+
+  const handleDeleteUser = (user) => {
+    // Các thao tác để xóa người dùng
+  };
 
   const handleAddNewEmployee = () => {
     //sử lý API và add new
@@ -111,10 +141,23 @@ function UserTable({ userColumns }) {
                     id="dropdownMenuButton"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
+                    aria-controls="user-menu" 
+                    aria-haspopup="true" 
+                    onClick={handleClick}
                   >
                     ...
                   </button>
-                  
+                  <Menu
+                  id="user-menu"
+                  anchorEl={anchorEl}
+                  keepMounted
+                  open={Boolean(anchorEl)}
+                  onClose={handleClose}
+                >
+                  <MenuItem onClick={() => handleViewUser(item)}>View</MenuItem>
+                  <MenuItem onClick={() => handleEditUser(item)}>Edit</MenuItem>
+                  <MenuItem onClick={() => handleDeleteUser(item)}>Delete</MenuItem>
+                </Menu>
                 </div>
               </td>
             </tr>
