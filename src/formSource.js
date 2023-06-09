@@ -72,6 +72,65 @@ export const userColumns = [
     accessor: "icon",
   },
 ];
+
+export const salaryColumns = [
+  {
+    Header: "ID",
+    accessor: "id",
+  },
+  {
+    Header: "User",
+    accessor: "user",
+  },
+  {
+    Header: "Day Start",
+    accessor: "dayS",
+  },
+  {
+    Header: "Day End",
+    accessor: "dayE",
+  },
+  {
+    Header: "Location Work",
+    accessor: "locationW",
+  },
+  {
+    Header: "Standard Work",
+    accessor: "standardW",
+  },
+  {
+    Header: "Weekday Work",
+    accessor: "weekdayW",
+  },
+  {
+    Header: "Day Off",
+    accessor: "dayO",
+  },
+  {
+    Header: "Holiday",
+    accessor: "holiday",
+  },
+  {
+    Header: "Number of Days of Leave",
+    accessor: "numberL",
+  },
+  {
+    Header: "Number of Working Days",
+    accessor: "numberD",
+  },
+  {
+    Header: "Status",
+    accessor: "status",
+  },
+  {
+    Header: "Action",
+    accessor: "action",
+  },
+  {
+    Header: "Salary Total",
+    accessor: "salary",
+  },
+];
   
   export const productInputs = [
     {
