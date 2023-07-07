@@ -13,6 +13,8 @@ import ListUser from "./pages/list/ListUser";
 import { ListSalary } from "./pages/list/ListSalary";
 import Salary from "./pages/Salary/Salary";
 import UserProfile from "./pages/userProfile/userProfile";
+import LayoutHome from "./pages/defaultHome";
+import Payment from "./pages/payment";
 
 function App() {
   const { darkMode } = useContext(DarkModeContext);
@@ -33,10 +35,27 @@ function App() {
               index
               element={
                 <RequireAuth>
-                  <Home />
+                  <LayoutHome/>
                 </RequireAuth>
               }
             />
+            <Route path="/home">
+              <Route index
+              element ={
+                <RequireAuth>
+                  <Home/>
+                </RequireAuth>
+              }/>
+            </Route>
+            
+            <Route path="/payment">
+              <Route index
+              element ={
+                <RequireAuth>
+                  <Payment/>
+                </RequireAuth>
+              }/>
+            </Route>
 
             <Route path="users">
               <Route
