@@ -4,43 +4,42 @@ import styles from "./LayoutHome.module.scss";
 
 const cx = classNames.bind(styles);
 
-const LayoutHome= () => {
+const LayoutHome = () => {
   return (
     <div className={cx("wapper")}>
       <div className={cx("container")}>
-        <div className={cx("content")}>
+        <div className={cx("content")}>       
           <div className={cx("content-top")}>
-            <span>chào mừng đến với Xpandt</span>
-            <p>
-              để quản lí<span> nhân sự</span>
-            </p>
+            <div className={cx("inner")}>
+              <div className={cx("header-logo")}>
+                <img src="" alt="XPandit logo"/>
+              </div>
+              <div className={cx("header-items")}>
+              <Link to="/home">
+                <button text>Phiên bản web</button>
+              </Link>
+              <Link to="/payment">
+                <button text>Gia hạn</button>
+              </Link>
+              </div>
+            </div>
           </div>
-          <div className="btn-options">
-            <Link to="/home">
-              <button text>Phiên bản web</button>
-            </Link>
-            <Link to="/payment">
-              <button text>
-                <p>Gia hạn</p>
-              </button>
-            </Link>
-          </div>
+          
           <div className={cx("content-bot")}>
             <div className={cx("bot-left")}>
-              <span>
-                Quản lí nhân sự <p>thật dễ dàng</p>
-              </span>
-              <p>Khi đã có XPandit.</p>
-              <div></div>
+              <div>XPandit</div>           
+              <p>XPandit là phần mềm quản lý nhân sự, </p>
+              <p>giúp quản lý nhân cho các doanh nghiệp,</p>
+              <p> công ty một cách dễ dàng và thuận tiện nhất</p>
             </div>
             <div className={cx("bot-right")}>
-              <img className={cx("image-home")} alt="Image" />
+              <img className={cx("image-home")} alt="Image" src="/" />
             </div>
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default LayoutHome;
